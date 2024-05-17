@@ -1,0 +1,5 @@
+locals {
+  tag = {
+    Environment = "Development"
+  }
+}
