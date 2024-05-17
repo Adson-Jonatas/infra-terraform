@@ -1,0 +1,33 @@
+# Arquivo .gitattributes
+
+# Arquivos Terraform
+*.tf        text eol=lf linguist-language=HCL
+*.tfvars    text eol=lf linguist-language=HCL
+*.hcl       text eol=lf linguist-language=HCL
+*.tfstate   binary
+*.tfstate.* binary
+
+# Evita que arquivos de estado Terraform sejam exportados para o Git
+terraform.tfstate       export-ignore
+terraform.tfstate.backup export-ignore
+*.tfstate               export-ignore
+*.tfstate.*             export-ignore
+
+# Arquivos JSON gerados pelo Terraform
+*.json     text eol=lf
+
+# Arquivos YAML, comuns em configurações do Kubernetes e Helm
+*.yaml     text eol=lf linguist-detectable=true
+*.yml      text eol=lf linguist-detectable=true
+
+# Arquivos Dockerfile
+Dockerfile linguist-detectable=true
+
+# Arquivos de script Shell
+*.sh       text eol=lf linguist-detectable=true
+
+# Arquivos Markdown para documentação
+*.md       text eol=lf
+
+# Configurações do Git para evitar problemas de formatação e exportação
+.env       export-ignore
