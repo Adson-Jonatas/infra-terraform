@@ -19,7 +19,6 @@ resource "aws_route_table_association" "assoc_pub_1a_business" {
 }
 
 
-
 resource "aws_subnet" "subnet_pub_1b_business" {
   vpc_id                  = aws_vpc.vpc_business.id
   cidr_block              = cidrsubnet(var.cidr, 8, 2)

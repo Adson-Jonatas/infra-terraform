@@ -2,6 +2,11 @@ output "name" {
   value = var.project_name
 }
 
-# output "teste" {
-#   value = module.Network.vpc_id
-# }
+output "subnet_pub_1a" {
+  value = module.Network.subnet_pub_1a
+}
+
+
+output "subnet_pub_1b" {
+  value = module.Network.subnet_pub_1b
+}
